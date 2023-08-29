@@ -39,7 +39,9 @@ Sales person -- needs query to 1 of them
 
 Sales intern -- needs query to some subset of one of them 
 
-## API for creating multi-choice quiz 
+## 
+
+## API for accumulating / editing / quiz questions
 
 Support Multiple choice and Fill-in-the blanks (cloze) questions
 
@@ -50,11 +52,21 @@ Question bank only
 	  - get up to N right answers for each questoin in [list of question]
 	  - get up to N wrong answers for each questoin in [list of question]
 
+Can stand up an instance to let crowd-source creation of 
+quizzes e.g. for Real Estate Broker Test; or Shakespeare Quotes; whatever.
+
+Allow for some kind of quality indicator to be included, so site admin can enable "thumbs up" or "reviewed" type features
+	  
+
 ### tech
 Fast API, some kind of document database -- dynamodb or mongo?
 
 	  
+## Snowflake -- update source columns with comments
+Snowflake allows alter table t1 alter column cN set commment = 'cN tells you if a customer is deadbeat' ....
+have an external database of column comments and apply them to source when needed.
 
+Expect lineage tools to pick up those comments in cleaned fields?
 
 
 
